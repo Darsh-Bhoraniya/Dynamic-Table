@@ -1,35 +1,38 @@
 import React from "react";
+// import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
 
 const DynamicTable = ({ data }) => {
   if (!data || data.length === 0) {
-    return <p>No data available</p>;
+    return <p className="text-center text-danger">No data available</p>;
   }
 
   const headers = Object.keys(data[0]);
 
   return (
-    <table border="1" style={{ borderCollapse: "collapse", width: "100%" }}>
-      <thead>
-        <tr>
-          {headers.map((header) => (
-            <th key={header} style={{ padding: "8px", backgroundColor: "#f4f4f4" }}>
-              {header.toUpperCase()}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row, index) => (
-          <tr key={index}>
+    <div className="table-responsive">
+      <table className="table table-bordered table-striped table-hover">
+        <thead className="thead-dark">
+          <tr>
             {headers.map((header) => (
-              <td key={header} style={{ padding: "8px", textAlign: "center" }}>
-                {row[header]}
-              </td>
+              <th key={header} className="text-center">
+                {header.toUpperCase()}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.map((row, index) => (
+            <tr key={index}>
+              {headers.map((header) => (
+                <td key={header} className="text-center">
+                  {row[header]}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
