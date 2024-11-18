@@ -2,10 +2,6 @@ import React from "react";
 // import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
 
 const DynamicTable = ({ data }) => {
-  if (!data || data.length === 0) {
-    return <p className="text-center text-danger">No data available</p>;
-  }
-
   const headers = Object.keys(data[0]);
 
   return (
