@@ -22,3 +22,5 @@ We use the following Mock API for data:
 ### API URL
 
 https://630ee9c4379256341883572e.mockapi.io/Beach
+
+For that Data Provied a dynamic array data
