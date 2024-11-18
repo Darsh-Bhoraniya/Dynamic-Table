@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DynamicTable from "./DynamicTable";
 
-const App = () => {
+function App (){
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   // Fetch data from API
