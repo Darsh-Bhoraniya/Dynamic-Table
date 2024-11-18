@@ -13,7 +13,7 @@ This project demonstrates how to create a dynamic table in a React application b
 ## Technology Stack
 
 - **React**: A JavaScript library for building user interfaces.
-- **Mock API**: Simulates an API endpoint to provide dynamic data.
+- **Mock API**: Simulates an API endpoint to provide dynamic Array data.
 
 ## Mock API Details
 
