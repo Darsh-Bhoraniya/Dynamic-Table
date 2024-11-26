@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DynamicTable from "./DynamicTable";
+import DynamicTable from "./components/DynamicTable";
 
 function App (){
   const [data, setData] = useState([]);
@@ -18,6 +18,8 @@ function App (){
 
     fetchData();
   }, []);
+
+// In place of Api We Use a Static Data Of Array
 
   return (
     <div style={{ padding: "20px" }} className="text-center">
